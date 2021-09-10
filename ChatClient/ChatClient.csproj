@@ -49,23 +49,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChatClientGUI.cs">
+    <Compile Include="Views\ChatClientGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChatClientGUI.Designer.cs">
+    <Compile Include="Views\ChatClientGUI.Designer.cs">
       <DependentUpon>ChatClientGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Models\Client.cs" />
-    <Compile Include="UserDataGUI.cs">
+    <Compile Include="Views\UserDataGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserDataGUI.Designer.cs">
+    <Compile Include="Views\UserDataGUI.Designer.cs">
       <DependentUpon>UserDataGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ChatClientGUI.resx">
+    <EmbeddedResource Include="Views\ChatClientGUI.resx">
       <DependentUpon>ChatClientGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -78,7 +78,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserDataGUI.resx">
+    <EmbeddedResource Include="Views\UserDataGUI.resx">
       <DependentUpon>UserDataGUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />

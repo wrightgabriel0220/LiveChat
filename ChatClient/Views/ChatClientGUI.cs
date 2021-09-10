@@ -29,20 +29,40 @@ namespace ChatClient
 
     public void RenderMessage(string user, string message)
     {
-      var messageString = $"{user}: {message}";
-      MessageFeed.Text += "\n" + messageString;
+      LogMessage($"{user}: {message}");
+    }
+
+    public void LogMessage(string message)
+    {
+      MessageFeed.SelectedText = "\n" + message;
     }
 
     // Controller Interactions
 
     private async void ConnectButton_Click(object sender, EventArgs e)
     {
+      Console.WriteLine("Clicked the connect button!");
       await _client.EstablishConnection(this, _ip, _username);
     }
 
     private async void SendButton_Click(object sender, EventArgs e)
     {
-      await _client.SendMessage(MsgInput.Text);
+      if (_client.GetConnectedState())
+      {
+        await _client.SendMessage(MsgInput.Text);
+        MsgInput.Text = "";
+      }
+      else
+      {
+        MessageFeed.SelectionColor = Color.Red;
+        LogMessage("Cannot send message without connection");
+        MessageFeed.SelectionColor = Color.Black;
+      }
+    }
+
+    private void ChatClientGUI_Load(object sender, EventArgs e)
+    {
+      ConnectButton.PerformClick();
     }
   }
 }

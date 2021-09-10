@@ -12,7 +12,7 @@ namespace ChatClient.Controllers
 {
   class ClientController
   {
-    private Client _client;
+    private Client _client = null;
     private readonly ChatClientGUI _ClientGUI;
 
     public ClientController(ChatClientGUI GUI)
@@ -40,6 +40,11 @@ namespace ChatClient.Controllers
     public void Update(string user, string message)
     {
       _ClientGUI.RenderMessage(user, message);
+    }
+
+    public bool GetConnectedState()
+    {
+      return _client.connection.State.ToString() == "Connected";
     }
 
     public async Task SendMessage(string message)

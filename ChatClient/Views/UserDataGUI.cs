@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ChatClient.Controllers;
 
 namespace ChatClient
 {
@@ -23,7 +24,6 @@ namespace ChatClient
 
     private void ConnectButton_Click(object sender, EventArgs e)
     {
-      Console.WriteLine("Clicked");
       new ChatClientGUI(IPInput.Text, UsernameInput.Text).Show();
       this.Hide();
     }
