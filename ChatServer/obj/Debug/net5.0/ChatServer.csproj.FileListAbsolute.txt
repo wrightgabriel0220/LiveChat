@@ -55,3 +55,14 @@ C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\obj\Debug\net5.0\Chat
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\obj\Debug\net5.0\ref\ChatServer.dll
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\obj\Debug\net5.0\ChatServer.pdb
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\obj\Debug\net5.0\ChatServer.genruntimeconfig.cache
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\System.IO.Pipelines.dll

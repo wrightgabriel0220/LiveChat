@@ -1,15 +1,31 @@
 {
   "version": 2,
-  "dgSpecHash": "EF4CZGg2Cnu2icQs+6T0Dv6JwE0Uc794EHTVdHSJugUNzudogFAsEuuFbRLssyxjVGgARVr7sf7Sk6uqVFibJQ==",
+  "dgSpecHash": "iKw1R8F/emMPeP4xYGYUVn+90FN/UgXSJt3NtyJnQKoPyW/C91rr+4MPx9A99itYrk1M/dm48WNi7+fbsKwjYw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gabe\\Desktop\\Coding Course\\C#\\LiveChat\\ChatServer\\ChatServer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\5.0.9\\microsoft.aspnetcore.connections.abstractions.5.0.9.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\5.0.9\\microsoft.aspnetcore.http.connections.client.5.0.9.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\5.0.9\\microsoft.aspnetcore.http.connections.common.5.0.9.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.9\\microsoft.aspnetcore.http.features.5.0.9.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.aspnetcore.signalr.client\\5.0.9\\microsoft.aspnetcore.signalr.client.5.0.9.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\5.0.9\\microsoft.aspnetcore.signalr.client.core.5.0.9.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\5.0.9\\microsoft.aspnetcore.signalr.common.5.0.9.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\5.0.9\\microsoft.aspnetcore.signalr.protocols.json.5.0.9.nupkg.sha512",
     "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.2\\microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
     "C:\\Users\\Gabe\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Gabe\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\Gabe\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\Gabe\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "C:\\Users\\Gabe\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+    "C:\\Users\\Gabe\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
+    "C:\\Users\\Gabe\\.nuget\\packages\\system.threading.channels\\5.0.0\\system.threading.channels.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

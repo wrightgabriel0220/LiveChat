@@ -8,29 +8,20 @@ using ChatServer.Models;
 
 namespace ChatServer.Hubs
 {
-  public interface IChatClient
-  {
-    Task RenderMessage(Message message);
-  }
-
   public class ChatHub : Hub
   {
-    private IRoomRepository _repository;
-    private readonly Random _random;
-    public ChatHub(IRoomRepository repository, Random random)
+    //private RoomRepository _repository;
+    //private readonly Random _random;
+    public ChatHub()
     {
-      _repository = repository;
-      _random = random;
+      // _repository = repository;
+      // _random = random;
     }
 
     public Task SendMessage(string user, string message)
     {
+      Console.WriteLine("Sending a message");
       return Clients.All.SendAsync("ReceiveMessage", user, message);
-    }
-
-    public void AddUser(string Name, Room TargetRoom)
-    {
-      TargetRoom.ActiveUsers.Add(Name, new User(Name));
     }
 
     public override async Task OnConnectedAsync()
@@ -38,7 +29,7 @@ namespace ChatServer.Hubs
       // When the user's client connects to the server
       // Create a user and connect them to general chat
       // var room = _repository.Rooms.FirstOrDefault(room => room.Name == "General");
-      Console.WriteLine("Getting a connection at ChatHub");
+      Console.WriteLine("YOU DID IT! CONNECTED TO CHATHUB!");
       await base.OnConnectedAsync();
     }
 

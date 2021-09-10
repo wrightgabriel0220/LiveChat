@@ -36,7 +36,11 @@ namespace ChatServer
       {
         c.SwaggerDoc("v1", new OpenApiInfo { Title = "ChatServer", Version = "v1" });
       });
-      services.AddSignalR();
+      services.AddSignalR(hubOptions =>
+      {
+        hubOptions.EnableDetailedErrors = true;
+        hubOptions.KeepAliveInterval = TimeSpan.FromMinutes(1);
+      });
 
     }
 
@@ -51,20 +55,12 @@ namespace ChatServer
         app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ChatServer v1"));
       }
 
-      app.Use(next => context => {
-        // Custom middleware - though I'm not sure what this "next => context =>" arrow function structure is
-        Console.WriteLine("RECEIVING REQ ON PORT 5001");
-        next(context);
-        return Task.CompletedTask;
-        // Look into why returning Task.CompletedTask seems to let the middleware chain function as expected
-      });
-
       app.UseHttpsRedirection();
 
       app.UseRouting();
 
       app.UseAuthorization();
-      
+
       app.UseEndpoints(endpoints => {
         // endpoints.MapX creates a route
         // the app.Uses are middlewares.
