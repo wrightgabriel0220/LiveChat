@@ -17,7 +17,7 @@ namespace ChatClient.Controllers
         .WithUrl("https://localhost:5001/chat")
         .Build();
 
-      connection.On<String>("ReceiveMessage", message =>
+      connection.On<String, String>("ReceiveMessage", (user, message) =>
       {
         Console.WriteLine($"Somebody sent a message: {message}");
         return null;

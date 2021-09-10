@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using ChatClient.Controllers;
+using Microsoft.AspNetCore.SignalR.Client;
 
 namespace ChatClient
 {
@@ -33,10 +34,10 @@ namespace ChatClient
       }
     }
 
-    private void SendButton_Click(object sender, EventArgs e)
+    private async void SendButton_Click(object sender, EventArgs e)
     {
       Console.WriteLine($"Sending message: {MsgInput.Text}");
-      client.connection.SendCoreAsync("SendMessage", new string[] { MsgInput.Text });
+      await client.connection.InvokeAsync("SendMessage", "slappyjoe", MsgInput.Text);
       MsgInput.Text = "";
     }
   }
