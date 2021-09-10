@@ -1,0 +1,17 @@
+C:\Users\Gabe\Desktop\Coding Course\C#\HelloWorld\obj\Debug\HelloWorld.Properties.Resources.resources
+C:\Users\Gabe\Desktop\Coding Course\C#\HelloWorld\obj\Debug\ChatClient.csproj.GenerateResource.cache
+C:\Users\Gabe\Desktop\Coding Course\C#\HelloWorld\obj\Debug\ChatClient.csproj.CoreCompileInputs.cache
+C:\Users\Gabe\Desktop\Coding Course\C#\HelloWorld\obj\Debug\HelloWorld.exe
+C:\Users\Gabe\Desktop\Coding Course\C#\HelloWorld\obj\Debug\HelloWorld.pdb
+C:\Users\Gabe\Desktop\Coding Course\C#\HelloWorld\bin\Debug\HelloWorld.exe
+C:\Users\Gabe\Desktop\Coding Course\C#\HelloWorld\bin\Debug\HelloWorld.pdb
+C:\Users\Gabe\Desktop\Coding Course\C#\HelloWorld\obj\Debug\ChatClient.ChatClientGUI.resources
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatClient\bin\Debug\HelloWorld.exe
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatClient\bin\Debug\HelloWorld.pdb
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatClient\obj\Debug\ChatClient.csproj.AssemblyReference.cache
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatClient\obj\Debug\ChatClient.ChatClientGUI.resources
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatClient\obj\Debug\HelloWorld.Properties.Resources.resources
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatClient\obj\Debug\ChatClient.csproj.GenerateResource.cache
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatClient\obj\Debug\ChatClient.csproj.CoreCompileInputs.cache
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatClient\obj\Debug\HelloWorld.exe
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatClient\obj\Debug\HelloWorld.pdb
