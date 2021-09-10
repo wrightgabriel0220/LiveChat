@@ -20,7 +20,6 @@ namespace ChatServer.Hubs
 
     public Task SendMessage(string user, string message)
     {
-      Console.WriteLine("Sending a message");
       return Clients.All.SendAsync("ReceiveMessage", user, message);
     }
 

@@ -1,20 +1,20 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.SignalR.Client;
+using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Linq;
-using System.Text;
-using Microsoft.AspNetCore.SignalR.Client;
 using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+using ChatClient.Controllers;
 
-namespace ChatClient.Controllers
+namespace ChatClient.Models
 {
   class Client
   {
     public HubConnection connection;
-    public Client(ChatClientGUI ClientGUI, string ip)
+    public string Username;
+    public Client(ClientController ClientControl, string ip, string username)
     {
-      Console.WriteLine($"Iptest: {ip}");
       connection = new HubConnectionBuilder()
         .WithUrl($"https://{ip}:5001/chat", config =>
         {
@@ -25,13 +25,13 @@ namespace ChatClient.Controllers
         })
         .Build();
 
+      // Message handlers
       connection.On<String, String>("ReceiveMessage", (user, message) =>
       {
-        ClientGUI.RenderMessage(user, message);
-        return null;
+        ClientControl.Update(user, message);
       });
 
-      Console.WriteLine($"connection state: {connection.State}");
+      Username = username;
     }
   }
 }

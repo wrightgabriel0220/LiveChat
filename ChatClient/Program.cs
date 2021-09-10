@@ -15,9 +15,7 @@ namespace ChatClient
     {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      // UserDataGUI UserData = new UserDataGUI();
       Application.Run(new UserDataGUI());
-      // Application.Run(new ChatClientGUI(UserData.Ip, UserData.Username));
     }
   }
 }

@@ -55,7 +55,8 @@
     <Compile Include="ChatClientGUI.Designer.cs">
       <DependentUpon>ChatClientGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\Client.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Models\Client.cs" />
     <Compile Include="UserDataGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,5 +92,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
