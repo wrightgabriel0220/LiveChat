@@ -11,7 +11,7 @@ namespace ChatClient.Controllers
   class Client
   {
     public HubConnection connection;
-    public Client()
+    public Client(ChatClientGUI ClientGUI)
     {
       connection = new HubConnectionBuilder()
         .WithUrl("https://localhost:5001/chat")
@@ -19,7 +19,7 @@ namespace ChatClient.Controllers
 
       connection.On<String, String>("ReceiveMessage", (user, message) =>
       {
-        Console.WriteLine($"Somebody sent a message: {message}");
+        ClientGUI.RenderMessage(user, message);
         return null;
       });
 

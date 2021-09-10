@@ -19,12 +19,18 @@ namespace ChatClient
       InitializeComponent();
     }
 
+    public void RenderMessage(string user, string message)
+    {
+      var messageString = $"{user}: {message}";
+      MessageFeed.Text += "\n" + messageString;
+    }
+
     private async void ConnectButton_Click(object sender, EventArgs e)
     {
       Console.WriteLine("Attempting to connect");
       try
       {
-        client = new Client();
+        client = new Client(this);
         await client.connection.StartAsync();
         Console.WriteLine("Listening...");
       }

@@ -47,7 +47,7 @@ namespace ChatClient
       this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
       this.SendButton = new System.Windows.Forms.Button();
       this.MsgInput = new System.Windows.Forms.TextBox();
-      this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+      this.MessageFeed = new System.Windows.Forms.RichTextBox();
       this.label1 = new System.Windows.Forms.Label();
       ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
       this.bindingNavigator1.SuspendLayout();
@@ -203,13 +203,13 @@ namespace ChatClient
       this.MsgInput.Size = new System.Drawing.Size(775, 20);
       this.MsgInput.TabIndex = 4;
       // 
-      // richTextBox1
+      // MessageFeed
       // 
-      this.richTextBox1.Location = new System.Drawing.Point(17, 51);
-      this.richTextBox1.Name = "richTextBox1";
-      this.richTextBox1.Size = new System.Drawing.Size(775, 332);
-      this.richTextBox1.TabIndex = 5;
-      this.richTextBox1.Text = "";
+      this.MessageFeed.Location = new System.Drawing.Point(17, 51);
+      this.MessageFeed.Name = "MessageFeed";
+      this.MessageFeed.Size = new System.Drawing.Size(775, 332);
+      this.MessageFeed.TabIndex = 5;
+      this.MessageFeed.Text = "";
       // 
       // label1
       // 
@@ -221,19 +221,19 @@ namespace ChatClient
       this.label1.TabIndex = 6;
       this.label1.Text = "ChatServer";
       // 
-      // Form1
+      // ChatClientGUI
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
       this.Controls.Add(this.label1);
-      this.Controls.Add(this.richTextBox1);
+      this.Controls.Add(this.MessageFeed);
       this.Controls.Add(this.MsgInput);
       this.Controls.Add(this.SendButton);
       this.Controls.Add(this.bindingNavigator1);
       this.Controls.Add(this.lblHelloWorld);
       this.Controls.Add(this.ConnectButton);
-      this.Name = "Form1";
+      this.Name = "ChatClientGUI";
       this.Text = "Form1";
       ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
       this.bindingNavigator1.ResumeLayout(false);
@@ -261,7 +261,7 @@ namespace ChatClient
     private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
     private System.Windows.Forms.Button SendButton;
     private System.Windows.Forms.TextBox MsgInput;
-    private System.Windows.Forms.RichTextBox richTextBox1;
+    private System.Windows.Forms.RichTextBox MessageFeed;
     private System.Windows.Forms.Label label1;
   }
 }
