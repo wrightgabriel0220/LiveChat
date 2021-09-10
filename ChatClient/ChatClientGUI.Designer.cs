@@ -234,7 +234,7 @@ namespace ChatClient
       this.Controls.Add(this.lblHelloWorld);
       this.Controls.Add(this.ConnectButton);
       this.Name = "ChatClientGUI";
-      this.Text = "Form1";
+      this.Text = "GabeChat Client";
       ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
       this.bindingNavigator1.ResumeLayout(false);
       this.bindingNavigator1.PerformLayout();

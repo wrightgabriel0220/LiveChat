@@ -5,17 +5,19 @@ using System.Windows.Forms;
 
 namespace ChatClient
 {
-    static class Program
+  static class Program
+  {
+    /// <summary>
+    /// The main entry point for the application.
+    /// </summary>
+    [STAThread]
+    static void Main()
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChatClientGUI());
-        }
+      Application.EnableVisualStyles();
+      Application.SetCompatibleTextRenderingDefault(false);
+      // UserDataGUI UserData = new UserDataGUI();
+      Application.Run(new UserDataGUI());
+      // Application.Run(new ChatClientGUI(UserData.Ip, UserData.Username));
     }
+  }
 }
