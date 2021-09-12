@@ -93,6 +93,7 @@ namespace ChatClient
       this.Controls.Add(this.ConnectButton);
       this.Name = "ChatClientGUI";
       this.Text = "GabeChat Client";
+      this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ChatClientGUI_FormClosed);
       this.Load += new System.EventHandler(this.ChatClientGUI_Load);
       this.ResumeLayout(false);
       this.PerformLayout();

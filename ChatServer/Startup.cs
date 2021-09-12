@@ -30,7 +30,6 @@ namespace ChatServer
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-
       services.AddControllers();
       services.AddSwaggerGen(c =>
       {
@@ -39,9 +38,8 @@ namespace ChatServer
       services.AddSignalR(hubOptions =>
       {
         hubOptions.EnableDetailedErrors = true;
-        hubOptions.KeepAliveInterval = TimeSpan.FromMinutes(1);
+        hubOptions.ClientTimeoutInterval = TimeSpan.FromMinutes(1);
       });
-
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -24,7 +24,7 @@ namespace ChatClient
 
     private void ConnectButton_Click(object sender, EventArgs e)
     {
-      new ChatClientGUI(IPInput.Text, UsernameInput.Text).Show();
+      new ChatClientGUI(IPInput.Text, UsernameInput.Text, this).Show();
       this.Hide();
     }
   }

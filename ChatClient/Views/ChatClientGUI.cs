@@ -17,31 +17,53 @@ namespace ChatClient
     private readonly ClientController _client;
     private readonly string _ip;
     private readonly string _username;
-    public ChatClientGUI(string ip, string username)
+    private readonly UserDataGUI _startupGUI;
+    public ChatClientGUI(string ip, string username, UserDataGUI StartupGUI)
     {
       InitializeComponent();
       _client = new ClientController(this);
       _ip = ip;
       _username = username;
+      _startupGUI = StartupGUI;
     }
 
     // View methods
 
     public void RenderMessage(string user, string message)
     {
-      LogMessage($"{user}: {message}");
+      LogMessage(Color.Black, $"{user}: {message}");
     }
 
-    public void LogMessage(string message)
+    public void LogMessage(Color color, string message)
     {
+      MessageFeed.SelectionColor = color;
       MessageFeed.SelectedText = "\n" + message;
+      MessageFeed.SelectionColor = Color.Black;
+    }
+
+    public void UpdateGUIForConnectionState(bool IsConnected)
+    {
+      if (ConnectButton.InvokeRequired || SendButton.InvokeRequired)
+      {
+        ConnectButton.Invoke(new Action<bool>(UpdateGUIForConnectionState), new object[] { IsConnected });
+        return;
+      }
+      ConnectButton.Enabled = !IsConnected;
+      SendButton.Enabled = IsConnected;
+      if (IsConnected)
+      {
+        LogMessage(Color.Blue, "Connected to server!");
+      }
+      else
+      {
+        LogMessage(Color.Red, "Disconnected... Please press Connect to reattempt connection");
+      }
     }
 
     // Controller Interactions
 
     private async void ConnectButton_Click(object sender, EventArgs e)
     {
-      Console.WriteLine("Clicked the connect button!");
       await _client.EstablishConnection(this, _ip, _username);
     }
 
@@ -54,15 +76,18 @@ namespace ChatClient
       }
       else
       {
-        MessageFeed.SelectionColor = Color.Red;
-        LogMessage("Cannot send message without connection");
-        MessageFeed.SelectionColor = Color.Black;
+        LogMessage(Color.Red, "Cannot send message without connection");
       }
     }
 
     private void ChatClientGUI_Load(object sender, EventArgs e)
     {
       ConnectButton.PerformClick();
+    }
+
+    private void ChatClientGUI_FormClosed(object sender, FormClosedEventArgs e)
+    {
+      _startupGUI.Close();
     }
   }
 }

@@ -25,11 +25,23 @@ namespace ChatClient.Models
         })
         .Build();
 
+      void TriggerClientControlUpdate(string user, string message, bool IsChangingConnectionState)
+      {
+        ClientControl.Update(user, message, IsChangingConnectionState);
+      }
+
       // Message handlers
       connection.On<String, String>("ReceiveMessage", (user, message) =>
       {
         ClientControl.Update(user, message);
       });
+
+      connection.Closed += (err) =>
+      {
+        Console.WriteLine("test");
+        TriggerClientControlUpdate(null, null, true);
+        return Task.CompletedTask;
+      };
 
       Username = username;
     }

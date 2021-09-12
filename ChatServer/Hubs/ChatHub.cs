@@ -36,7 +36,7 @@ namespace ChatServer.Hubs
     {
       await base.OnDisconnectedAsync(error);
       Console.WriteLine(error);
-      Console.WriteLine("Closing a connection at ChatHub");
+      Console.WriteLine($"Closing connection {Context.ConnectionId} at ChatHub");
     }
   }
 }

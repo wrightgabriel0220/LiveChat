@@ -39,7 +39,6 @@ C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Micr
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\obj\Debug\net5.0\ChatServer.csproj.AssemblyReference.cache
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\obj\Debug\net5.0\ChatServer.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\obj\Debug\net5.0\ChatServer.AssemblyInfoInputs.cache
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\obj\Debug\net5.0\ChatServer.AssemblyInfo.cs

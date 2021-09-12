@@ -44,3 +44,4 @@ C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatClient\bin\Debug\System.Text
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatClient\bin\Debug\System.Text.Json.dll
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatClient\bin\Debug\System.ValueTuple.dll
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatClient\obj\Debug\ChatClient.UserDataGUI.resources
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatClient\obj\Debug\ChatClient.csproj.AssemblyReference.cache
