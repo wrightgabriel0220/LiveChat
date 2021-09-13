@@ -90,5 +90,15 @@ namespace ChatClient
     {
       _startupGUI.Close();
     }
+
+    private void MsgInput_KeyDown(object sender, KeyEventArgs e)
+    {
+      if (e.KeyCode == Keys.Enter)
+      {
+        SendButton.PerformClick();
+        e.Handled = true;
+        e.SuppressKeyPress = true;
+      }
+    }
   }
 }

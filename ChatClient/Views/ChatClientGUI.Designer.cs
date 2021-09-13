@@ -62,6 +62,7 @@ namespace ChatClient
       this.MsgInput.Name = "MsgInput";
       this.MsgInput.Size = new System.Drawing.Size(775, 20);
       this.MsgInput.TabIndex = 4;
+      this.MsgInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MsgInput_KeyDown);
       // 
       // MessageFeed
       // 
