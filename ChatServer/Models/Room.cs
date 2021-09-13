@@ -10,5 +10,10 @@ namespace ChatServer.Models
     public long Id { get; }
     public string Name { get; }
     public Hashtable ActiveUsers { get; }
+
+    public Room(string name)
+    {
+      Name = name;
+    }
   }
 }

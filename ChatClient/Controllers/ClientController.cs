@@ -21,6 +21,12 @@ namespace ChatClient.Controllers
       _ClientGUI = GUI;
     }
 
+    public void ReportError(Exception err, string AttemptedOperationTitle, string ClientMessage)
+    {
+      _ClientGUI.LogMessage(Color.Red, ClientMessage);
+      Console.WriteLine($"ERROR:\n Operation: {AttemptedOperationTitle} \n Exception: {err.Message} - {err.InnerException}");
+    }
+
     public async Task EstablishConnection(ChatClientGUI ClientGUI, string ip, string username)
     {
       _client = new Client(this, ip, username);
@@ -28,20 +34,37 @@ namespace ChatClient.Controllers
       try
       {
         await _client.connection.StartAsync();
+        await JoinRoom("General");
       }
       catch (Exception err)
       {
         _client = null;
-        _ClientGUI.LogMessage(Color.Red, "Failed to connect to server. Check your connection or IP and try again");
-        Console.WriteLine($"Connection to websocket server failed with error: {err.Message}");
-        Console.WriteLine($"InnerException: {err.InnerException}");
+        ReportError(err, "EstablishConnection", "Failed to establish connection. Check your target IP or try again.");
       }
       Update(null, null, true);
+    }
+
+    public async Task JoinRoom(string roomname)
+    {
+      try
+      {
+        if (_client != null) await _client.connection.InvokeAsync("JoinRoom", _client.Username, roomname);
+      }
+      catch (Exception err) {
+        ReportError(err, "JoinRoom", "Failed to join room. Check your connection and try again.");
+      }
+    }
+
+    public string GetCurrentRoomname()
+    {
+      if (_client != null) return _client.CurrentRoomname;
+      return "";
     }
 
     public void Update(string user, string message, bool connectionStateIsChanging = false)
     {
       if (user != null && message != null) _ClientGUI.RenderMessage(user, message);
+      if (user == null) _ClientGUI.LogMessage(Color.Blue, message);
       if (connectionStateIsChanging) _ClientGUI.UpdateGUIForConnectionState(GetConnectedState());
     }
 
@@ -51,9 +74,9 @@ namespace ChatClient.Controllers
       return false;
     }
 
-    public async Task SendMessage(string message)
+    public async Task SendMessage(string message, string targetRoom)
     {
-      await _client.connection.InvokeAsync("SendMessage", _client.Username, message);
+      await _client.connection.InvokeAsync("SendMessage", _client.Username, message, targetRoom);
     }
   }
 }

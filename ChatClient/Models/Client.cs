@@ -13,6 +13,7 @@ namespace ChatClient.Models
   {
     public HubConnection connection;
     public string Username;
+    public string CurrentRoomname;
     public Client(ClientController ClientControl, string ip, string username)
     {
       connection = new HubConnectionBuilder()
@@ -25,11 +26,6 @@ namespace ChatClient.Models
         })
         .Build();
 
-      void TriggerClientControlUpdate(string user, string message, bool IsChangingConnectionState)
-      {
-        ClientControl.Update(user, message, IsChangingConnectionState);
-      }
-
       // Message handlers
       connection.On<String, String>("ReceiveMessage", (user, message) =>
       {
@@ -38,8 +34,7 @@ namespace ChatClient.Models
 
       connection.Closed += (err) =>
       {
-        Console.WriteLine("test");
-        TriggerClientControlUpdate(null, null, true);
+        ClientControl.Update(null, null, true);
         return Task.CompletedTask;
       };
 

@@ -14,13 +14,20 @@ namespace ChatServer.Hubs
     //private readonly Random _random;
     public ChatHub()
     {
-      // _repository = repository;
+      // _repository = new RoomRepository(new List<Room>() { new Room("General") });
       // _random = random;
     }
 
-    public Task SendMessage(string user, string message)
+    public Task SendMessage(string user, string message, string roomname)
     {
-      return Clients.All.SendAsync("ReceiveMessage", user, message);
+      return Clients.Group(roomname).SendAsync("ReceiveMessage", user, message);
+    }
+
+    public async Task<Task> JoinRoom(string username, string roomname)
+    {
+      Console.WriteLine($"{username} joined room {roomname}");
+      await Groups.AddToGroupAsync(Context.ConnectionId, roomname);
+      return Clients.Group(roomname).SendAsync("ReceiveMessage", null, $"{username} has joined {roomname}");
     }
 
     public override async Task OnConnectedAsync()

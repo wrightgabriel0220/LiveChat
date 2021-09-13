@@ -25,6 +25,11 @@ namespace ChatClient
       _ip = ip;
       _username = username;
       _startupGUI = StartupGUI;
+      RoomsSelect.Items.Add("General");
+      RoomsSelect.Items.Add("Test1");
+      RoomsSelect.Items.Add("Test2");
+      RoomsSelect.Items.Add("PeePeePooPoo");
+      RoomsSelect.SelectedIndex = 0;
     }
 
     // View methods
@@ -72,7 +77,7 @@ namespace ChatClient
     {
       if (_client.GetConnectedState())
       {
-        await _client.SendMessage(MsgInput.Text);
+        await _client.SendMessage(MsgInput.Text, RoomsSelect.Text);
         MsgInput.Text = "";
       }
       else
@@ -98,6 +103,22 @@ namespace ChatClient
         SendButton.PerformClick();
         e.Handled = true;
         e.SuppressKeyPress = true;
+      }
+    }
+
+    private async void RoomsSelectChange(object sender, EventArgs e)
+    {
+      if (RoomsSelect.Text == _client.GetCurrentRoomname()) return;
+      LogMessage(Color.Blue, $"Joining room {RoomsSelect.Text}");
+      try
+      {
+        await _client.JoinRoom(RoomsSelect.Text);
+        MessageFeed.Text = "";
+        _client.Update(null, null, false);
+      }
+      catch
+      {
+        RoomsSelect.SelectedText = _client.GetCurrentRoomname();
       }
     }
   }

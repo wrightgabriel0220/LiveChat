@@ -7,11 +7,15 @@ namespace ChatServer.Models
 { 
   public interface IRoomRepository
   {
-    List<Room> Rooms { get; }
+    List<Room> Rooms { get; } 
   }
 
   public class RoomRepository : IRoomRepository
   {
-    public List<Room> Rooms { get; } = new List<Room>();
+    public List<Room> Rooms { get; }
+    public RoomRepository(List<Room> rooms)
+    {
+      Rooms = rooms;
+    }
   }
 }

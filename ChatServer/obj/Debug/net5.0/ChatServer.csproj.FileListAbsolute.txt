@@ -65,3 +65,4 @@ C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Micr
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\bin\Debug\net5.0\System.IO.Pipelines.dll
+C:\Users\Gabe\Desktop\Coding Course\C#\LiveChat\ChatServer\obj\Debug\net5.0\ChatServer.csproj.AssemblyReference.cache
