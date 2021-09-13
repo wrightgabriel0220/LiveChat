@@ -36,6 +36,7 @@ namespace ChatClient
 
     public void LogMessage(Color color, string message)
     {
+      MessageFeed.SelectionStart = MessageFeed.Text.Length > 0 ? MessageFeed.Text.Length - 1 : 0;
       MessageFeed.SelectionColor = color;
       MessageFeed.SelectedText = "\n" + message;
       MessageFeed.SelectionColor = Color.Black;
@@ -60,7 +61,7 @@ namespace ChatClient
       }
     }
 
-    // Controller Interactions
+    // View-Controller Handlers
 
     private async void ConnectButton_Click(object sender, EventArgs e)
     {

@@ -47,7 +47,8 @@ namespace ChatClient.Controllers
 
     public bool GetConnectedState()
     {
-      return _client.connection.State.ToString() == "Connected";
+      if (_client != null) return _client.connection.State.ToString() == "Connected";
+      return false;
     }
 
     public async Task SendMessage(string message)

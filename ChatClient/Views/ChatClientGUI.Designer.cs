@@ -65,8 +65,10 @@ namespace ChatClient
       // 
       // MessageFeed
       // 
+      this.MessageFeed.Cursor = System.Windows.Forms.Cursors.IBeam;
       this.MessageFeed.Location = new System.Drawing.Point(17, 51);
       this.MessageFeed.Name = "MessageFeed";
+      this.MessageFeed.ReadOnly = true;
       this.MessageFeed.Size = new System.Drawing.Size(775, 332);
       this.MessageFeed.TabIndex = 5;
       this.MessageFeed.Text = "";
@@ -105,8 +107,8 @@ namespace ChatClient
         private System.Windows.Forms.Button ConnectButton;
     private System.Windows.Forms.Button SendButton;
     private System.Windows.Forms.TextBox MsgInput;
-    private System.Windows.Forms.RichTextBox MessageFeed;
     private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.RichTextBox MessageFeed;
   }
 }
 
